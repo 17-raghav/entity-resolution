@@ -23,7 +23,7 @@ full-data rate of 1.215 per S1.
 | Pipeline wall time, train + test (v10 settings, `BER_FULL_S1=1`, top-60 + 5 + 10 slots) | 3 min 3 s | `smoke_pipeline.log:212` |
 | Stage-1 recall@60 on sample validation (linear / LightGBM) | 0.9945 / 0.9957 | `smoke_pipeline.log:125` |
 | Pruner pair recall at K=10, tau=0.002 (sample validation) | 0.9937 at 3.66 candidates/S1 | `smoke_pipeline.log:164` |
-| Macro F0.5, 5,000 sample "test" S1, v10 pipeline | 0.9947 | `smoke_score.log:2` |
+| Macro F0.5, 5,000 sample "test" S1, v10 pipeline | 0.9947 (repeat runs: 0.9924, 0.9940) | `smoke_score.log:2`, `smoke_repeat_2.log`, `smoke_repeat_3.log` |
 | Pair precision / recall, same | 0.9995 / 0.9821 | `smoke_score.log:3` |
 | Official validator on the sample output | PASS | `smoke_score.log:14` |
 | Macro F0.5, same S1, v11 matcher (decoy weight 2.0) | 0.9957 | `smoke_v11.log:26` |

@@ -1,0 +1,37 @@
+cmd: BER_FULL_S1=1 py -3.12 src/run_pipeline.py --data data/sample --work work_smoke --out output_smoke --train --topk1 60 --empty-slots 5 --addr-slots 10   (repeat run 3, same sample, same code)
+Mon Oct  5 19:36:48 IST 2026
+>> io_utils.py 19:36:49
+   done in 1s
+>> evaluate.py 19:36:50
+   done in 1s
+>> normalize.py --split train 19:36:51
+   done in 7s
+>> mine_lexicons.py 19:36:58
+   done in 2s
+>> normalize.py --split train 19:37:00
+   done in 4s
+>> blocking.py --split train --keys-only 19:37:04
+   done in 3s
+>> train.py ranker 19:37:07
+   done in 11s
+>> train.py lgbranker 19:37:18
+   done in 32s
+>> blocking.py --split train 19:37:50
+   done in 14s
+>> train.py feats --drop --feat-name train_feat.parquet 19:38:03
+   done in 22s
+>> train.py pruner --feat-name train_feat.parquet --scored-name train_scored.parquet 19:38:26
+   done in 28s
+>> train.py matcher --k 10 --tau 0.002 --scored-name train_scored.parquet 19:38:54
+   done in 21s
+>> normalize.py --split test 19:39:15
+   done in 2s
+>> blocking.py --split test 19:39:17
+   done in 7s
+>> infer.py --out D:\portfolio_v0\entity-resolution\output_smoke 19:39:24
+S1 5000  candidates/S1 3.49  matches/S1 3.40  empty frac 0.0608
+   done in 12s
+exit 0 elapsed 167 s
+S1 5000  macro F0.5 0.9940
+pair precision 0.9977  pair recall 0.9853
+per country (country, S1, F0.5): [('India', 2004, 0.9907), ('US', 2996, 0.9963)]

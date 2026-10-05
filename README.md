@@ -151,7 +151,7 @@ the train split. Not comparable to full-data numbers (far fewer competing record
 | Smoke test | Value | Log |
 |---|---|---|
 | End-to-end time, train + test | 3 min 3 s | `results/smoke_pipeline.log:212` |
-| Macro F0.5 on 5,000 sample S1 (v10) | 0.9947 | `results/smoke_score.log:2` |
+| Macro F0.5 on 5,000 sample S1 (v10), 3 runs of identical code and data | 0.9947 / 0.9924 / 0.9940 | `results/smoke_score.log:2`, `results/smoke_repeat_2.log`, `results/smoke_repeat_3.log` |
 | Macro F0.5 on same S1 (v11 matcher, w2) | 0.9957 | `results/smoke_v11.log:26` |
 | Official validator | PASS | `results/smoke_score.log:14` |
 
@@ -179,6 +179,9 @@ Full data, from existing logs and notes (not re-run). Full table with sources: `
   raw logs not kept.
 - v4 and v7 validation scores: only in submission notes, no raw log kept locally.
 - Any full-data number re-run on current hardware: the full pipeline was not re-run.
+- Bit-for-bit reproducibility: repeated smoke runs on the same sample give F0.5 0.9924-0.9947, so some
+  step is non-deterministic (likely row order from unordered polars group-bys feeding LightGBM). Not
+  yet traced.
 
 ## Limitations
 

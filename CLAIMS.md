@@ -41,6 +41,6 @@ Status:
 | AWS run time 1 h 53 min (v4), 2 h 48 min (v5) on 8 vCPU / 64 GB | | `submission_info/submission_4.md` line 9, `submission_5.md` line 9 | existing note |
 | Oracle F0.5 on candidate set ~0.994 | | HANDOFF.md line 119 | existing note (no raw log) |
 | Smoke test: end to end in 3 min 3 s on a laptop | | `results/smoke_pipeline.log:212` | verified now |
-| Smoke test macro F0.5 0.9947 (5k sample S1) | not comparable to full data | `results/smoke_score.log:2` | verified now (do not put on CV as a score) |
+| Smoke test macro F0.5 0.9947 / 0.9924 / 0.9940 over 3 identical runs (5k sample S1) | not comparable to full data; runs are not bit-reproducible | `results/smoke_score.log:2`, `results/smoke_repeat_2.log`, `results/smoke_repeat_3.log` | verified now (do not put on CV as a score) |
 | Validator PASS on full test output (v5) | | `results/existing_logs/v5_validator.txt:8` | existing log |
 | Leaderboard rank | - | | not used (deliberately) |

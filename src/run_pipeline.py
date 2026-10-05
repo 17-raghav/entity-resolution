@@ -74,7 +74,7 @@ def main():
             step("train.py", "matcher", "--k", str(a.k), "--tau", str(a.tau), "--scored-name", "train_scored.parquet")
         step("normalize.py", "--split", "test")
         step("blocking.py", "--split", "test")
-    step("infer.py", "--out", a.out, always=True)
+    step("infer.py", "--out", a.out, tag="infer", always=True)
 
 
 if __name__ == "__main__":
