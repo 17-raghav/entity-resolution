@@ -1,0 +1,410 @@
+start Sun Sep 27 02:01:08 UTC 2026  cores=8
+>> io_utils.py 02:01:08
+train s1 2206821 s23 10320219 [{'country': 'India', 'count': 883188}, {'country': 'US', 'count': 1323633}]
+gt pairs 7638365 unique s23 7638365
+test s1 1732544 s23 9969589 [{'country': 'France', 'count': 259452}, {'country': 'US', 'count': 663106}, {'country': 'India', 'count': 809986}]
+   done in 27s
+>> evaluate.py 02:01:35
+scorer selftest ok
+val S1: 220140
+   done in 0s
+>> normalize.py --split train 02:01:36
+train s1 2206821 states found 0.0
+train s23 10320219 states found 0.0
+   done in 228s
+>> mine_lexicons.py 02:05:24
+indic pairs 496221
+indic lexicon size 1347
+S1 state vocab 61 [('India', 'andhra pradesh'), ('India', 'bihar'), ('India', 'delhi'), ('India', 'gujarat'), ('India', 'haryana'), ('India', 'karnataka'), ('India', 'kerala'), ('India', 'madhya pradesh'), ('India', 'maharashtra'), ('India', 'orissa'), ('India', 'punjab'), ('India', 'rajasthan'), ('India', 'tamil nadu'), ('India', 'telangana'), ('India', 'uttar pradesh'), ('India', 'west bengal'), ('US', 'ak'), ('US', 'al'), ('US', 'ar'), ('US', 'az'), ('US', 'ca'), ('US', 'co'), ('US', 'ct'), ('US', 'dc'), ('US', 'de'), ('US', 'fl'), ('US', 'ga'), ('US', 'ia'), ('US', 'id'), ('US', 'il'), ('US', 'in'), ('US', 'ks'), ('US', 'ky'), ('US', 'la'), ('US', 'ma'), ('US', 'md'), ('US', 'me'), ('US', 'mn'), ('US', 'mo'), ('US', 'mt'), ('US', 'nc'), ('US', 'nd'), ('US', 'ne'), ('US', 'nm'), ('US', 'ny'), ('US', 'oh'), ('US', 'ok'), ('US', 'or'), ('US', 'pa'), ('US', 'ri'), ('US', 'sc'), ('US', 'sd'), ('US', 'tn'), ('US', 'tx'), ('US', 'ut'), ('US', 'va'), ('US', 'vt'), ('US', 'wa'), ('US', 'wi'), ('US', 'wv'), ('US', 'wy')]
+shape: (132, 9)
+┌─────────┬────────────────┬───────────────┬────────┬───┬────────┬──────────┬──────────┬───────────┐
+│ country ┆ p              ┆ q             ┆ n      ┆ … ┆ nq     ┆ share    ┆ cover    ┆ last_frac │
+│ ---     ┆ ---            ┆ ---           ┆ ---    ┆   ┆ ---    ┆ ---      ┆ ---      ┆ ---       │
+│ str     ┆ str            ┆ str           ┆ u32    ┆   ┆ u32    ┆ f64      ┆ f64      ┆ f64       │
+╞═════════╪════════════════╪═══════════════╪════════╪═══╪════════╪══════════╪══════════╪═══════════╡
+│ India   ┆ ap             ┆ andhra        ┆ 15900  ┆ … ┆ 43645  ┆ 0.993874 ┆ 0.364303 ┆ 0.837844  │
+│         ┆                ┆ pradesh       ┆        ┆   ┆        ┆          ┆          ┆           │
+│ India   ┆ amdhraprades   ┆ andhra        ┆ 10252  ┆ … ┆ 43645  ┆ 1.0      ┆ 0.234895 ┆ 0.862162  │
+│         ┆                ┆ pradesh       ┆        ┆   ┆        ┆          ┆          ┆           │
+│ India   ┆ bihar          ┆ bihar         ┆ 37131  ┆ … ┆ 57165  ┆ 0.999973 ┆ 0.649541 ┆ 0.864573  │
+│ India   ┆ br             ┆ bihar         ┆ 20577  ┆ … ┆ 57165  ┆ 0.999806 ┆ 0.359958 ┆ 0.844447  │
+│ India   ┆ delhi          ┆ delhi         ┆ 216636 ┆ … ┆ 312004 ┆ 0.997449 ┆ 0.694337 ┆ 0.532774  │
+│ India   ┆ dl             ┆ delhi         ┆ 112931 ┆ … ┆ 312004 ┆ 0.999947 ┆ 0.361954 ┆ 0.847246  │
+│ India   ┆ dilli          ┆ delhi         ┆ 74961  ┆ … ┆ 312004 ┆ 0.999947 ┆ 0.240257 ┆ 0.86401   │
+│ India   ┆ gujarat        ┆ gujarat       ┆ 92883  ┆ … ┆ 144591 ┆ 1.0      ┆ 0.642384 ┆ 0.86836   │
+│ India   ┆ gj             ┆ gujarat       ┆ 52317  ┆ … ┆ 144591 ┆ 1.0      ┆ 0.361827 ┆ 0.846364  │
+│ India   ┆ haryana        ┆ haryana       ┆ 38423  ┆ … ┆ 90448  ┆ 0.997508 ┆ 0.424808 ┆ 0.829016  │
+│ India   ┆ hr             ┆ haryana       ┆ 32783  ┆ … ┆ 90448  ┆ 1.0      ┆ 0.362451 ┆ 0.84472   │
+│ India   ┆ hariyan        ┆ haryana       ┆ 21735  ┆ … ┆ 90448  ┆ 1.0      ┆ 0.240304 ┆ 0.865511  │
+│ India   ┆ karnataka      ┆ karnataka     ┆ 113628 ┆ … ┆ 176489 ┆ 0.999974 ┆ 0.643825 ┆ 0.866224  │
+│ India   ┆ ka             ┆ karnataka     ┆ 63794  ┆ … ┆ 176489 ┆ 0.996236 ┆ 0.361462 ┆ 0.844398  │
+│ India   ┆ keralam        ┆ kerala        ┆ 34360  ┆ … ┆ 89085  ┆ 1.0      ┆ 0.385699 ┆ 0.864995  │
+│ India   ┆ kerala         ┆ kerala        ┆ 29658  ┆ … ┆ 89085  ┆ 0.999528 ┆ 0.332918 ┆ 0.86032   │
+│ India   ┆ kl             ┆ kerala        ┆ 25734  ┆ … ┆ 89085  ┆ 1.0      ┆ 0.28887  ┆ 0.843901  │
+│ India   ┆ madhya pradesh ┆ madhya        ┆ 22929  ┆ … ┆ 56901  ┆ 1.0      ┆ 0.402963 ┆ 0.874594  │
+│         ┆                ┆ pradesh       ┆        ┆   ┆        ┆          ┆          ┆           │
+│ India   ┆ mp             ┆ madhya        ┆ 20586  ┆ … ┆ 56901  ┆ 0.999514 ┆ 0.361786 ┆ 0.846918  │
+│         ┆                ┆ pradesh       ┆        ┆   ┆        ┆          ┆          ┆           │
+│ India   ┆ madhy prades   ┆ madhya        ┆ 13604  ┆ … ┆ 56901  ┆ 1.0      ┆ 0.239082 ┆ 0.865621  │
+│         ┆                ┆ pradesh       ┆        ┆   ┆        ┆          ┆          ┆           │
+│ India   ┆ maharashtra    ┆ maharashtra   ┆ 192882 ┆ … ┆ 483657 ┆ 1.0      ┆ 0.398799 ┆ 0.874625  │
+│ India   ┆ mh             ┆ maharashtra   ┆ 174516 ┆ … ┆ 483657 ┆ 1.0      ┆ 0.360826 ┆ 0.846126  │
+│ India   ┆ maharastr      ┆ maharashtra   ┆ 117183 ┆ … ┆ 483657 ┆ 1.0      ┆ 0.242285 ┆ 0.86428   │
+│ India   ┆ odisha         ┆ orissa        ┆ 10381  ┆ … ┆ 35200  ┆ 1.0      ┆ 0.294915 ┆ 0.871818  │
+│ India   ┆ od             ┆ orissa        ┆ 10173  ┆ … ┆ 35200  ┆ 0.99892  ┆ 0.289006 ┆ 0.84908   │
+│ India   ┆ orissa         ┆ orissa        ┆ 8108   ┆ … ┆ 35200  ┆ 1.0      ┆ 0.230341 ┆ 0.85227   │
+│ India   ┆ odaisa         ┆ orissa        ┆ 6774   ┆ … ┆ 35200  ┆ 1.0      ┆ 0.192443 ┆ 0.868749  │
+│ India   ┆ punjab         ┆ punjab        ┆ 14582  ┆ … ┆ 32726  ┆ 1.0      ┆ 0.445578 ┆ 0.786304  │
+│ India   ┆ pb             ┆ punjab        ┆ 11891  ┆ … ┆ 32726  ┆ 1.0      ┆ 0.36335  ┆ 0.847002  │
+│ India   ┆ pamjab         ┆ punjab        ┆ 7934   ┆ … ┆ 32726  ┆ 1.0      ┆ 0.242437 ┆ 0.864633  │
+│ India   ┆ rajasthan      ┆ rajasthan     ┆ 52404  ┆ … ┆ 81325  ┆ 0.999962 ┆ 0.644377 ┆ 0.865198  │
+│ India   ┆ rj             ┆ rajasthan     ┆ 29409  ┆ … ┆ 81325  ┆ 1.0      ┆ 0.361623 ┆ 0.845095  │
+│ India   ┆ tamil nadu     ┆ tamil nadu    ┆ 63851  ┆ … ┆ 158700 ┆ 1.0      ┆ 0.402338 ┆ 0.872626  │
+│ India   ┆ tn             ┆ tamil nadu    ┆ 57119  ┆ … ┆ 158700 ┆ 0.999842 ┆ 0.359918 ┆ 0.857256  │
+│ India   ┆ dhamilnadhu    ┆ tamil nadu    ┆ 38219  ┆ … ┆ 158700 ┆ 1.0      ┆ 0.240825 ┆ 0.864569  │
+│ India   ┆ telangana      ┆ telangana     ┆ 46816  ┆ … ┆ 141833 ┆ 0.999274 ┆ 0.330078 ┆ 0.870442  │
+│ India   ┆ tg             ┆ telangana     ┆ 40846  ┆ … ┆ 141833 ┆ 0.999437 ┆ 0.287987 ┆ 0.846719  │
+│ India   ┆ telamgana      ┆ telangana     ┆ 27417  ┆ … ┆ 141833 ┆ 0.999235 ┆ 0.193305 ┆ 0.866723  │
+│ India   ┆ uttar pradesh  ┆ uttar pradesh ┆ 77231  ┆ … ┆ 185083 ┆ 1.0      ┆ 0.417278 ┆ 0.838313  │
+│ India   ┆ up             ┆ uttar pradesh ┆ 67120  ┆ … ┆ 185083 ┆ 0.999643 ┆ 0.362648 ┆ 0.844004  │
+│ India   ┆ uttar prades   ┆ uttar pradesh ┆ 44973  ┆ … ┆ 185083 ┆ 1.0      ┆ 0.242988 ┆ 0.865147  │
+│ India   ┆ west bengal    ┆ west bengal   ┆ 57691  ┆ … ┆ 144314 ┆ 1.0      ┆ 0.39976  ┆ 0.876164  │
+│ India   ┆ wb             ┆ west bengal   ┆ 52277  ┆ … ┆ 144314 ┆ 1.0      ┆ 0.362245 ┆ 0.850455  │
+│ India   ┆ pascimavang    ┆ west bengal   ┆ 34715  ┆ … ┆ 144314 ┆ 1.0      ┆ 0.240552 ┆ 0.864485  │
+│ US      ┆ ak             ┆ ak            ┆ 4945   ┆ … ┆ 9644   ┆ 1.0      ┆ 0.512754 ┆ 0.85798   │
+│ US      ┆ alaska         ┆ ak            ┆ 4699   ┆ … ┆ 9644   ┆ 1.0      ┆ 0.487246 ┆ 0.854403  │
+│ US      ┆ al             ┆ al            ┆ 43215  ┆ … ┆ 83625  ┆ 1.0      ┆ 0.516771 ┆ 0.859135  │
+│ US      ┆ alabama        ┆ al            ┆ 40410  ┆ … ┆ 83625  ┆ 0.999332 ┆ 0.483229 ┆ 0.864279  │
+│ US      ┆ ar             ┆ ar            ┆ 35861  ┆ … ┆ 69502  ┆ 1.0      ┆ 0.515971 ┆ 0.844268  │
+│ US      ┆ arkansas       ┆ ar            ┆ 33641  ┆ … ┆ 69502  ┆ 1.0      ┆ 0.484029 ┆ 0.863956  │
+│ US      ┆ az             ┆ az            ┆ 74800  ┆ … ┆ 144735 ┆ 1.0      ┆ 0.516807 ┆ 0.866772  │
+│ US      ┆ arizona        ┆ az            ┆ 69935  ┆ … ┆ 144735 ┆ 1.0      ┆ 0.483193 ┆ 0.862484  │
+│ US      ┆ ca             ┆ ca            ┆ 49185  ┆ … ┆ 95323  ┆ 1.0      ┆ 0.515983 ┆ 0.866225  │
+│ US      ┆ california     ┆ ca            ┆ 46138  ┆ … ┆ 95323  ┆ 0.992984 ┆ 0.484017 ┆ 0.857777  │
+│ US      ┆ co             ┆ co            ┆ 5647   ┆ … ┆ 10992  ┆ 1.0      ┆ 0.513737 ┆ 0.856954  │
+│ US      ┆ colorado       ┆ co            ┆ 5345   ┆ … ┆ 10992  ┆ 0.999626 ┆ 0.486263 ┆ 0.862095  │
+│ US      ┆ ct             ┆ ct            ┆ 24578  ┆ … ┆ 47343  ┆ 1.0      ┆ 0.519147 ┆ 0.863937  │
+│ US      ┆ connecticut    ┆ ct            ┆ 22765  ┆ … ┆ 47343  ┆ 1.0      ┆ 0.480853 ┆ 0.86501   │
+│ US      ┆ dc             ┆ dc            ┆ 8972   ┆ … ┆ 17345  ┆ 1.0      ┆ 0.517267 ┆ 0.865064  │
+│ US      ┆ district of    ┆ dc            ┆ 8373   ┆ … ┆ 17345  ┆ 1.0      ┆ 0.482733 ┆ 0.857594  │
+│         ┆ columbia       ┆               ┆        ┆   ┆        ┆          ┆          ┆           │
+│ US      ┆ de             ┆ de            ┆ 11411  ┆ … ┆ 22161  ┆ 1.0      ┆ 0.514914 ┆ 0.863263  │
+│ US      ┆ delaware       ┆ de            ┆ 10750  ┆ … ┆ 22161  ┆ 0.905492 ┆ 0.485086 ┆ 0.786072  │
+│ US      ┆ fl             ┆ fl            ┆ 915    ┆ … ┆ 1763   ┆ 1.0      ┆ 0.519002 ┆ 0.799412  │
+│ US      ┆ ga             ┆ ga            ┆ 4307   ┆ … ┆ 8241   ┆ 0.999768 ┆ 0.522631 ┆ 0.853512  │
+│ US      ┆ georgia        ┆ ga            ┆ 3934   ┆ … ┆ 8241   ┆ 0.983254 ┆ 0.477369 ┆ 0.843724  │
+│ US      ┆ ia             ┆ ia            ┆ 29805  ┆ … ┆ 57814  ┆ 1.0      ┆ 0.515533 ┆ 0.866344  │
+│ US      ┆ iowa           ┆ ia            ┆ 28009  ┆ … ┆ 57814  ┆ 1.0      ┆ 0.484467 ┆ 0.862465  │
+│ US      ┆ id             ┆ id            ┆ 1570   ┆ … ┆ 3017   ┆ 1.0      ┆ 0.520384 ┆ 0.863239  │
+│ US      ┆ idaho          ┆ id            ┆ 1447   ┆ … ┆ 3017   ┆ 1.0      ┆ 0.479616 ┆ 0.862136  │
+│ US      ┆ il             ┆ il            ┆ 100905 ┆ … ┆ 194425 ┆ 1.0      ┆ 0.518992 ┆ 0.865052  │
+│ US      ┆ illinois       ┆ il            ┆ 93520  ┆ … ┆ 194425 ┆ 1.0      ┆ 0.481008 ┆ 0.864752  │
+│ US      ┆ in             ┆ in            ┆ 65288  ┆ … ┆ 126666 ┆ 1.0      ┆ 0.515434 ┆ 0.863598  │
+│ US      ┆ indiana        ┆ in            ┆ 61378  ┆ … ┆ 126666 ┆ 0.996623 ┆ 0.484566 ┆ 0.860685  │
+│ US      ┆ ks             ┆ ks            ┆ 20917  ┆ … ┆ 40350  ┆ 1.0      ┆ 0.518389 ┆ 0.864927  │
+│ US      ┆ kansas         ┆ ks            ┆ 19433  ┆ … ┆ 40350  ┆ 0.996002 ┆ 0.481611 ┆ 0.862166  │
+│ US      ┆ ky             ┆ ky            ┆ 38964  ┆ … ┆ 75322  ┆ 1.0      ┆ 0.517299 ┆ 0.86371   │
+│ US      ┆ kentucky       ┆ ky            ┆ 36358  ┆ … ┆ 75322  ┆ 1.0      ┆ 0.482701 ┆ 0.865941  │
+│ US      ┆ la             ┆ la            ┆ 5622   ┆ … ┆ 10899  ┆ 1.0      ┆ 0.515827 ┆ 0.85243   │
+│ US      ┆ louisiana      ┆ la            ┆ 5277   ┆ … ┆ 10899  ┆ 1.0      ┆ 0.484173 ┆ 0.857508  │
+│ US      ┆ ma             ┆ ma            ┆ 75148  ┆ … ┆ 145370 ┆ 1.0      ┆ 0.516943 ┆ 0.86019   │
+│ US      ┆ massachusetts  ┆ ma            ┆ 70222  ┆ … ┆ 145370 ┆ 1.0      ┆ 0.483057 ┆ 0.861587  │
+│ US      ┆ md             ┆ md            ┆ 53711  ┆ … ┆ 103733 ┆ 0.999981 ┆ 0.517781 ┆ 0.86505   │
+│ US      ┆ maryland       ┆ md            ┆ 50022  ┆ … ┆ 103733 ┆ 0.998762 ┆ 0.482219 ┆ 0.861982  │
+│ US      ┆ me             ┆ me            ┆ 15932  ┆ … ┆ 30908  ┆ 1.0      ┆ 0.515465 ┆ 0.864003  │
+│ US      ┆ maine          ┆ me            ┆ 14976  ┆ … ┆ 30908  ┆ 0.994951 ┆ 0.484535 ┆ 0.860234  │
+│ US      ┆ mn             ┆ mn            ┆ 41242  ┆ … ┆ 79912  ┆ 1.0      ┆ 0.516093 ┆ 0.864909  │
+│ US      ┆ minnesota      ┆ mn            ┆ 38670  ┆ … ┆ 79912  ┆ 1.0      ┆ 0.483907 ┆ 0.865957  │
+│ US      ┆ mo             ┆ mo            ┆ 34307  ┆ … ┆ 66235  ┆ 1.0      ┆ 0.517959 ┆ 0.865787  │
+│ US      ┆ missouri       ┆ mo            ┆ 31928  ┆ … ┆ 66235  ┆ 0.999937 ┆ 0.482041 ┆ 0.862139  │
+│ US      ┆ mt             ┆ mt            ┆ 13155  ┆ … ┆ 25697  ┆ 0.999924 ┆ 0.511927 ┆ 0.867574  │
+│ US      ┆ montana        ┆ mt            ┆ 12542  ┆ … ┆ 25697  ┆ 1.0      ┆ 0.488073 ┆ 0.86196   │
+│ US      ┆ nc             ┆ nc            ┆ 125447 ┆ … ┆ 242466 ┆ 0.999992 ┆ 0.51738  ┆ 0.866545  │
+│ US      ┆ north carolina ┆ nc            ┆ 117019 ┆ … ┆ 242466 ┆ 1.0      ┆ 0.48262  ┆ 0.863679  │
+│ US      ┆ nd             ┆ nd            ┆ 8928   ┆ … ┆ 17343  ┆ 1.0      ┆ 0.51479  ┆ 0.860999  │
+│ US      ┆ north dakota   ┆ nd            ┆ 8415   ┆ … ┆ 17343  ┆ 1.0      ┆ 0.48521  ┆ 0.8652    │
+│ US      ┆ ne             ┆ ne            ┆ 7414   ┆ … ┆ 14507  ┆ 1.0      ┆ 0.511064 ┆ 0.85027   │
+│ US      ┆ nebraska       ┆ ne            ┆ 7093   ┆ … ┆ 14507  ┆ 1.0      ┆ 0.488936 ┆ 0.865031  │
+│ US      ┆ nm             ┆ nm            ┆ 15604  ┆ … ┆ 30243  ┆ 1.0      ┆ 0.515954 ┆ 0.866833  │
+│ US      ┆ new mexico     ┆ nm            ┆ 14639  ┆ … ┆ 30243  ┆ 1.0      ┆ 0.484046 ┆ 0.867648  │
+│ US      ┆ ny             ┆ ny            ┆ 135427 ┆ … ┆ 262310 ┆ 1.0      ┆ 0.516286 ┆ 0.864696  │
+│ US      ┆ new york       ┆ ny            ┆ 128013 ┆ … ┆ 262310 ┆ 1.0      ┆ 0.488022 ┆ 0.856849  │
+│ US      ┆ oh             ┆ oh            ┆ 113531 ┆ … ┆ 219153 ┆ 1.0      ┆ 0.518044 ┆ 0.865526  │
+│ US      ┆ ohio           ┆ oh            ┆ 105622 ┆ … ┆ 219153 ┆ 0.999338 ┆ 0.481956 ┆ 0.863528  │
+│ US      ┆ ok             ┆ ok            ┆ 30252  ┆ … ┆ 58457  ┆ 1.0      ┆ 0.517509 ┆ 0.86666   │
+│ US      ┆ oklahoma       ┆ ok            ┆ 28206  ┆ … ┆ 58457  ┆ 1.0      ┆ 0.482509 ┆ 0.863564  │
+│ US      ┆ or             ┆ or            ┆ 39769  ┆ … ┆ 76859  ┆ 1.0      ┆ 0.517428 ┆ 0.864712  │
+│ US      ┆ oregon         ┆ or            ┆ 37090  ┆ … ┆ 76859  ┆ 0.985231 ┆ 0.482572 ┆ 0.848325  │
+│ US      ┆ pa             ┆ pa            ┆ 15576  ┆ … ┆ 30214  ┆ 0.999872 ┆ 0.515523 ┆ 0.85927   │
+│ US      ┆ pennsylvania   ┆ pa            ┆ 14638  ┆ … ┆ 30214  ┆ 1.0      ┆ 0.484477 ┆ 0.860913  │
+│ US      ┆ ri             ┆ ri            ┆ 1008   ┆ … ┆ 1976   ┆ 1.0      ┆ 0.510121 ┆ 0.769347  │
+│ US      ┆ rhode island   ┆ ri            ┆ 968    ┆ … ┆ 1976   ┆ 0.998968 ┆ 0.489879 ┆ 0.868982  │
+│ US      ┆ sc             ┆ sc            ┆ 4337   ┆ … ┆ 8455   ┆ 0.999539 ┆ 0.512951 ┆ 0.862305  │
+│ US      ┆ south carolina ┆ sc            ┆ 4118   ┆ … ┆ 8455   ┆ 1.0      ┆ 0.487049 ┆ 0.868699  │
+│ US      ┆ sd             ┆ sd            ┆ 1869   ┆ … ┆ 3651   ┆ 1.0      ┆ 0.511915 ┆ 0.871668  │
+│ US      ┆ south dakota   ┆ sd            ┆ 1782   ┆ … ┆ 3651   ┆ 1.0      ┆ 0.488085 ┆ 0.866303  │
+│ US      ┆ tn             ┆ tn            ┆ 79101  ┆ … ┆ 152892 ┆ 1.0      ┆ 0.517365 ┆ 0.857256  │
+│ US      ┆ tennessee      ┆ tn            ┆ 73792  ┆ … ┆ 152892 ┆ 0.999878 ┆ 0.482641 ┆ 0.863392  │
+│ US      ┆ tx             ┆ tx            ┆ 177184 ┆ … ┆ 342478 ┆ 1.0      ┆ 0.517359 ┆ 0.866251  │
+│ US      ┆ texas          ┆ tx            ┆ 165294 ┆ … ┆ 342478 ┆ 1.0      ┆ 0.482641 ┆ 0.865436  │
+│ US      ┆ ut             ┆ ut            ┆ 30470  ┆ … ┆ 59029  ┆ 0.999967 ┆ 0.516187 ┆ 0.8652    │
+│ US      ┆ utah           ┆ ut            ┆ 28559  ┆ … ┆ 59029  ┆ 1.0      ┆ 0.483813 ┆ 0.862057  │
+│ US      ┆ va             ┆ va            ┆ 79012  ┆ … ┆ 152832 ┆ 1.0      ┆ 0.516986 ┆ 0.866795  │
+│ US      ┆ virginia       ┆ va            ┆ 73820  ┆ … ┆ 152832 ┆ 0.997136 ┆ 0.483014 ┆ 0.8622    │
+│ US      ┆ vt             ┆ vt            ┆ 6866   ┆ … ┆ 13320  ┆ 1.0      ┆ 0.515465 ┆ 0.867695  │
+│ US      ┆ vermont        ┆ vt            ┆ 6454   ┆ … ┆ 13320  ┆ 0.997681 ┆ 0.484535 ┆ 0.858168  │
+│ US      ┆ wa             ┆ wa            ┆ 56162  ┆ … ┆ 108534 ┆ 1.0      ┆ 0.51746  ┆ 0.863226  │
+│ US      ┆ wi             ┆ wi            ┆ 41416  ┆ … ┆ 80047  ┆ 1.0      ┆ 0.517396 ┆ 0.865343  │
+│ US      ┆ wisconsin      ┆ wi            ┆ 38631  ┆ … ┆ 80047  ┆ 1.0      ┆ 0.482604 ┆ 0.866331  │
+│ US      ┆ wv             ┆ wv            ┆ 21373  ┆ … ┆ 41134  ┆ 1.0      ┆ 0.519594 ┆ 0.863745  │
+│ US      ┆ west virginia  ┆ wv            ┆ 19761  ┆ … ┆ 41134  ┆ 1.0      ┆ 0.480406 ┆ 0.863625  │
+│ US      ┆ wy             ┆ wy            ┆ 3801   ┆ … ┆ 7287   ┆ 1.0      ┆ 0.521614 ┆ 0.868742  │
+│ US      ┆ wyoming        ┆ wy            ┆ 3486   ┆ … ┆ 7287   ┆ 0.950382 ┆ 0.478386 ┆ 0.821105  │
+└─────────┴────────────────┴───────────────┴────────┴───┴────────┴──────────┴──────────┴───────────┘
+[('praivet', 54446, 1.0), ('the', 14255, 0.9151876534549281), ('sri', 10346, 0.9983568528900058), ('li', 9598, 0.9767659929151906), ('pra', 9354, 0.9991447509087021), ('dba', 8176, 0.9997553816046967), ('smt', 8043, 0.999627004848937), ('mr', 8007, 0.9946296990133633), ('shri', 7975, 0.9996238244514106), ('dr', 7961, 0.9927144831051375), ('praibhet', 6323, 1.0), ('limidhedh', 6253, 1.0), ('formerly', 5978, 1.0), ('as', 5911, 0.9727626459143969), ('bhiraivedh', 5446, 1.0), ('limirrad', 3620, 1.0), ('elaelapi', 3327, 1.0), ('praivarr', 3166, 1.0), ('tek', 3155, 0.9904912836767037), ('laksmi', 2332, 1.0), ('doing', 2093, 1.0), ('enarji', 2044, 1.0), ('aka', 2036, 0.9960707269155207), ('aiti', 2033, 1.0), ('imtaranesanal', 1919, 1.0), ('estet', 1915, 1.0), ('impeks', 1911, 1.0), ('phud', 1909, 1.0), ('phuds', 1896, 1.0), ('siv', 1832, 0.9978165938864629), ('prodakts', 1803, 1.0), ('prodyusar', 1791, 1.0), ('pavar', 1765, 1.0), ('marketimg', 1753, 1.0), ('tredimg', 1751, 1.0), ('bildars', 1701, 1.0), ('sistams', 1681, 1.0), ('devalapars', 1658, 1.0), ('phaumdesan', 1592, 1.0), ('vemcars', 1575, 1.0), ('known', 1531, 0.9986936642717178), ('lajistiks', 1527, 1.0), ('fka', 1470, 0.9993197278911564), ('projekts', 1427, 1.0), ('imjiniyarimg', 1416, 1.0), ('nee', 1416, 0.992231638418079), ('eksaports', 1380, 1.0), ('midiy', 1355, 1.0), ('sys', 1336, 0.9887724550898204), ('prapartij', 1304, 1.0), ('egro', 1301, 1.0), ('bijanes', 1290, 1.0), ('imdastrij', 1274, 1.0), ('mainejamemt', 1264, 1.0), ('teknolaji', 1264, 1.0), ('hai', 1262, 0.9920760697305864), ('imphrastrakcar', 1251, 1.0), ('haspitailiti', 1250, 1.0), ('imphotek', 1250, 1.0), ('kamsaltemsi', 1240, 1.0), ('saphtaveyar', 1237, 1.0), ('imphr', 1230, 1.0), ('phainems', 1228, 1.0), ('laiph', 1221, 1.0), ('emtarapraijej', 1218, 1.0), ('keyar', 1210, 1.0), ('kamstraksams', 1209, 1.0), ('teknolajij', 1197, 1.0), ('helthakeyar', 1191, 1.0), ('kamstraksan', 1189, 1.0), ('kamsaltemts', 1185, 1.0), ('kamsaltimg', 1182, 1.0), ('sarvisej', 1180, 1.0), ('salyusams', 1172, 1.0), ('investamemts', 1160, 1.0), ('syam', 1160, 1.0), ('drim', 1155, 1.0), ('praim', 1140, 1.0), ('klasik', 1139, 1.0), ('investamemt', 1136, 1.0)]
+   done in 19s
+>> normalize.py --split train 02:05:43
+train s1 2206821 states found 1.0
+train s23 10320219 states found 0.957457104350208
+   done in 232s
+>> blocking.py --split train --keys-only 02:09:35
+keys 48971482 216126431 t 139.2602822780609
+   done in 141s
+>> train.py ranker 02:11:56
+chunk 0 27184799 
+ranker {'intercept': -9.380505561828613, 'coef': {'lw0': 0.46343570947647095, 'lw1': 0.9540520906448364, 'lw2': 0.6296937465667725, 'lw3': 0.5479289889335632, 'lw4': 1.1956521272659302, 'lw5': 0.9090427756309509, 'lw6': 0.3280033767223358, 'lw7': 0.6298308968544006, 'lw8': 0.05043162778019905, 'lw9': 0.6563102006912231, 'r0': 0.658596396446228, 'r1': -2.338574171066284, 'r2': 2.9110541343688965, 'r3': 3.931612730026245, 'r4': 0.6740478873252869, 'r5': -0.20334680378437042, 'r6': -0.3284577429294586, 'r7': -0.17525695264339447, 'r8': 2.151865243911743, 'r9': -0.41212084889411926, 'lnk': 0.6276838779449463}}
+   done in 35s
+>> train.py lgbranker 02:12:31
+chunk 0 4738144 
+chunk 25000 4747099 
+Training until validation scores don't improve for 30 rounds
+[50]	valid_0's binary_logloss: 0.0127353
+[100]	valid_0's binary_logloss: 0.0135283
+Early stopping, best iteration is:
+[74]	valid_0's binary_logloss: 0.0124
+stage-1 recall@20: linear 0.9663  lgb 0.9736
+stage-1 recall@30: linear 0.9704  lgb 0.9773
+stage-1 recall@40: linear 0.9733  lgb 0.9797
+stage-1 recall@60: linear 0.9762  lgb 0.9818
+recall@200 (shortlist ceiling): 0.9887
+   done in 73s
+>> blocking.py --split train 02:13:45
+train subset S1 787781
+chunk 0 1531443 
+chunk 25000 1532625 
+chunk 50000 1533215 
+chunk 75000 1530084 
+chunk 100000 1532627 
+chunk 125000 1530986 
+chunk 150000 1532341 
+chunk 175000 1532608 
+chunk 200000 1532887 
+chunk 225000 1531416 
+chunk 250000 1530135 
+chunk 275000 1531931 
+chunk 300000 1531160 
+chunk 325000 1531626 
+chunk 350000 1530587 
+chunk 375000 1531565 
+chunk 400000 1531425 
+chunk 425000 1532431 
+chunk 450000 1530274 
+chunk 475000 1531472 
+chunk 500000 1530249 
+chunk 525000 1531933 
+chunk 550000 1533819 
+chunk 575000 1532965 
+chunk 600000 1530671 
+chunk 625000 1531166 
+chunk 650000 1530528 
+chunk 675000 1532437 
+chunk 700000 1531871 
+chunk 725000 1532920 
+chunk 750000 1531873 
+chunk 775000 782529 
+train stage1 48265799 t 648.2170722484589
+   done in 649s
+>> train.py feats --drop --feat-name train_feat.parquet 02:24:33
+filler tokens per country [('India', 626), ('US', 2596)]
+features 0 6127371
+features 100000 6127425
+features 200000 6124566
+features 300000 6124279
+features 400000 6126453
+features 500000 6125634
+features 600000 2340687
+   done in 512s
+>> train.py pruner --feat-name train_feat.parquet --scored-name train_scored.parquet 02:33:06
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.0056566
+[200]	valid_0's binary_logloss: 0.00507559
+[300]	valid_0's binary_logloss: 0.00494327
+[400]	valid_0's binary_logloss: 0.00488616
+[500]	valid_0's binary_logloss: 0.00485659
+[600]	valid_0's binary_logloss: 0.00484101
+[700]	valid_0's binary_logloss: 0.00483846
+Early stopping, best iteration is:
+[688]	valid_0's binary_logloss: 0.00483613
+pruner_f0 top features [('bscore', 22242961), ('a_tset_gap', 1623070), ('b_gap', 1161836), ('b_rank', 897912), ('b_gap23', 585039), ('a_tset', 382133), ('o2_idfmax', 351047), ('num_gap', 318019), ('b_rank23', 314943), ('natok2', 293011), ('n_tsort', 201399), ('o2_idf', 173524), ('den_addr_s23_c', 164858), ('nnum2', 157665), ('nkeys', 144062), ('only2_n', 135433), ('x_jw', 122379), ('n_partial', 121532), ('ids_j', 119308), ('num_rel', 115489), ('a_partial', 107240), ('state_rel', 107089), ('num_gap_rel', 89245), ('w5', 88820), ('amb_name_s1_c', 87719)]
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.00568051
+[200]	valid_0's binary_logloss: 0.00507
+[300]	valid_0's binary_logloss: 0.00492424
+[400]	valid_0's binary_logloss: 0.00488099
+[500]	valid_0's binary_logloss: 0.00484168
+[600]	valid_0's binary_logloss: 0.00483218
+[700]	valid_0's binary_logloss: 0.0048194
+Early stopping, best iteration is:
+[680]	valid_0's binary_logloss: 0.00481752
+pruner_f1 top features [('bscore', 22235228), ('a_tset_gap', 1596119), ('b_gap', 1160416), ('b_rank', 900926), ('b_gap23', 581107), ('a_tset', 430187), ('num_gap', 341866), ('o2_idfmax', 336648), ('b_rank23', 302433), ('natok2', 286464), ('n_tsort', 199694), ('o2_idf', 184656), ('den_addr_s23_c', 164859), ('nnum2', 151833), ('nkeys', 149375), ('only2_n', 141128), ('x_jw', 128548), ('ids_j', 126971), ('state_rel', 113925), ('n_partial', 113878), ('num_rel', 109987), ('a_partial', 102751), ('w5', 96024), ('legal_rel', 90704), ('amb_name_s1_c', 88085)]
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.00562727
+[200]	valid_0's binary_logloss: 0.0049276
+[300]	valid_0's binary_logloss: 0.00478112
+[400]	valid_0's binary_logloss: 0.00471502
+[500]	valid_0's binary_logloss: 0.00467666
+[600]	valid_0's binary_logloss: 0.0046432
+[700]	valid_0's binary_logloss: 0.00462672
+[800]	valid_0's binary_logloss: 0.00460997
+[900]	valid_0's binary_logloss: 0.00459894
+[1000]	valid_0's binary_logloss: 0.00459333
+Did not meet early stopping. Best iteration is:
+[996]	valid_0's binary_logloss: 0.00459255
+pruner top features [('bscore', 44438917), ('a_tset_gap', 3209920), ('b_gap', 2323241), ('b_rank', 1789966), ('b_gap23', 1069018), ('a_tset', 831573), ('num_gap', 676363), ('o2_idfmax', 658632), ('b_rank23', 622698), ('natok2', 575615), ('n_tsort', 408618), ('only2_n', 344049), ('o2_idf', 339378), ('nnum2', 319986), ('den_addr_s23_c', 303969), ('nkeys', 298524), ('num_rel', 266792), ('ids_j', 251212), ('x_jw', 243495), ('n_partial', 221240), ('state_rel', 218369), ('a_partial', 215849), ('w5', 184087), ('legal_rel', 175638), ('konly2_n', 164970)]
+K=5 tau=0.0 {'pair_recall': 0.9358, 'total_pairs': 316622, 'mean_cands': 4.9992, 'median_cands': 5.0, 'p95_cands': 5.0, 'empty_frac': 0.0}
+K=5 tau=0.002 {'pair_recall': 0.9357, 'total_pairs': 248350, 'mean_cands': 3.9213, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0223}
+K=5 tau=0.01 {'pair_recall': 0.9354, 'total_pairs': 236833, 'mean_cands': 3.7394, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0315}
+K=5 tau=0.03 {'pair_recall': 0.9338, 'total_pairs': 221055, 'mean_cands': 3.4903, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0414}
+K=6 tau=0.0 {'pair_recall': 0.9672, 'total_pairs': 379901, 'mean_cands': 5.9984, 'median_cands': 6.0, 'p95_cands': 6.0, 'empty_frac': 0.0}
+K=6 tau=0.002 {'pair_recall': 0.9672, 'total_pairs': 269022, 'mean_cands': 4.2477, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0223}
+K=6 tau=0.01 {'pair_recall': 0.9667, 'total_pairs': 253076, 'mean_cands': 3.9959, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0315}
+K=6 tau=0.03 {'pair_recall': 0.9644, 'total_pairs': 231315, 'mean_cands': 3.6523, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0414}
+K=8 tau=0.0 {'pair_recall': 0.9817, 'total_pairs': 506381, 'mean_cands': 7.9954, 'median_cands': 8.0, 'p95_cands': 8.0, 'empty_frac': 0.0}
+K=8 tau=0.002 {'pair_recall': 0.9817, 'total_pairs': 289579, 'mean_cands': 4.5723, 'median_cands': 4.0, 'p95_cands': 8.0, 'empty_frac': 0.0223}
+K=8 tau=0.01 {'pair_recall': 0.981, 'total_pairs': 266619, 'mean_cands': 4.2097, 'median_cands': 4.0, 'p95_cands': 8.0, 'empty_frac': 0.0315}
+K=8 tau=0.03 {'pair_recall': 0.9781, 'total_pairs': 237207, 'mean_cands': 3.7453, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0414}
+K=10 tau=0.0 {'pair_recall': 0.9828, 'total_pairs': 632742, 'mean_cands': 9.9906, 'median_cands': 10.0, 'p95_cands': 10.0, 'empty_frac': 0.0}
+K=10 tau=0.002 {'pair_recall': 0.9827, 'total_pairs': 295871, 'mean_cands': 4.6716, 'median_cands': 4.0, 'p95_cands': 9.0, 'empty_frac': 0.0223}
+K=10 tau=0.01 {'pair_recall': 0.9819, 'total_pairs': 269669, 'mean_cands': 4.2579, 'median_cands': 4.0, 'p95_cands': 8.0, 'empty_frac': 0.0315}
+K=10 tau=0.03 {'pair_recall': 0.9788, 'total_pairs': 237789, 'mean_cands': 3.7545, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0414}
+K=12 tau=0.0 {'pair_recall': 0.9829, 'total_pairs': 759008, 'mean_cands': 11.9842, 'median_cands': 12.0, 'p95_cands': 12.0, 'empty_frac': 0.0}
+K=12 tau=0.002 {'pair_recall': 0.9828, 'total_pairs': 297241, 'mean_cands': 4.6932, 'median_cands': 4.0, 'p95_cands': 9.0, 'empty_frac': 0.0223}
+K=12 tau=0.01 {'pair_recall': 0.982, 'total_pairs': 270119, 'mean_cands': 4.265, 'median_cands': 4.0, 'p95_cands': 8.0, 'empty_frac': 0.0315}
+K=12 tau=0.03 {'pair_recall': 0.9789, 'total_pairs': 237826, 'mean_cands': 3.7551, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0414}
+K=15 tau=0.0 {'pair_recall': 0.9829, 'total_pairs': 948166, 'mean_cands': 14.9709, 'median_cands': 15.0, 'p95_cands': 15.0, 'empty_frac': 0.0}
+K=15 tau=0.002 {'pair_recall': 0.9828, 'total_pairs': 297484, 'mean_cands': 4.6971, 'median_cands': 4.0, 'p95_cands': 9.0, 'empty_frac': 0.0223}
+K=15 tau=0.01 {'pair_recall': 0.982, 'total_pairs': 270165, 'mean_cands': 4.2657, 'median_cands': 4.0, 'p95_cands': 8.0, 'empty_frac': 0.0315}
+K=15 tau=0.03 {'pair_recall': 0.9789, 'total_pairs': 237826, 'mean_cands': 3.7551, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0414}
+   done in 3141s
+>> train.py matcher --k 10 --tau 0.002 --scored-name train_scored.parquet 03:25:27
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.0532309
+[200]	valid_0's binary_logloss: 0.0529474
+[300]	valid_0's binary_logloss: 0.0528984
+Early stopping, best iteration is:
+[293]	valid_0's binary_logloss: 0.0528869
+matcher top features [('p_prune', 8747412), ('pp_gap', 2038663), ('pp_sum23', 1001479), ('pp_sum1', 235233), ('pp_rank23', 63502), ('cl_amax', 39286), ('pp_n23', 35613), ('a_tset', 20777), ('pp_gap23', 19420), ('pp_margin23', 16318), ('bscore', 13911), ('b_gap23', 10886), ('b_gap', 10098), ('a_tset_gap', 9926), ('atok_j', 8864), ('b_rank', 8862), ('den_addr_s23_c', 7922), ('amb_name_s1_s', 6950), ('n_cand23', 6815), ('w7', 6605), ('pp_n1', 6574), ('w1', 6201), ('n_tsort', 5850), ('w6', 5401), ('pp_rank', 5326)]
+val S1 63334 pruned pairs 295871
+  ef_m0.1_e1.5_oto1: 0.98319
+  ef_m0.1_e1.25_oto0: 0.98318
+  ef_m0.1_e1.5_oto0: 0.98318
+  ef_m0.3_e1.5_oto0: 0.98318
+  ef_m0.1_e1.25_oto1: 0.98317
+  ef_m0.3_e1.5_oto1: 0.98317
+  ef_m0.3_e1.25_oto0: 0.98316
+  ef_m0.0_e1.5_oto0: 0.98315
+  ef_m0.0_e1.5_oto1: 0.98314
+  ef_m0.3_e1.25_oto1: 0.98313
+best ef_m0.1_e1.5_oto1 0.9831890377982323
+   done in 94s
+>> normalize.py --split test 03:27:00
+test s1 1732544 states found 0.8502479590705921
+test s23 9969589 states found 0.8278329227012267
+   done in 221s
+>> blocking.py --split test 03:30:42
+chunk 0 1540416 
+chunk 25000 1541202 
+chunk 50000 1542079 
+chunk 75000 1541052 
+chunk 100000 1540264 
+chunk 125000 1541927 
+chunk 150000 1541207 
+chunk 175000 1541690 
+chunk 200000 1540979 
+chunk 225000 1542445 
+chunk 250000 1541094 
+chunk 275000 1541520 
+chunk 300000 1539900 
+chunk 325000 1541164 
+chunk 350000 1540687 
+chunk 375000 1539988 
+chunk 400000 1539704 
+chunk 425000 1541192 
+chunk 450000 1541641 
+chunk 475000 1542369 
+chunk 500000 1540988 
+chunk 525000 1541744 
+chunk 550000 1541540 
+chunk 575000 1540695 
+chunk 600000 1541170 
+chunk 625000 1541120 
+chunk 650000 1540770 
+chunk 675000 1540987 
+chunk 700000 1541556 
+chunk 725000 1541654 
+chunk 750000 1540294 
+chunk 775000 1541091 
+chunk 800000 1540120 
+chunk 825000 1540591 
+chunk 850000 1540820 
+chunk 875000 1540822 
+chunk 900000 1541057 
+chunk 925000 1541511 
+chunk 950000 1541682 
+chunk 975000 1540121 
+chunk 1000000 1540597 
+chunk 1025000 1541045 
+chunk 1050000 1541230 
+chunk 1075000 1541169 
+chunk 1100000 1540899 
+chunk 1125000 1541477 
+chunk 1150000 1541094 
+chunk 1175000 1540901 
+chunk 1200000 1542453 
+chunk 1225000 1541847 
+chunk 1250000 1541305 
+chunk 1275000 1540968 
+chunk 1300000 1540625 
+chunk 1325000 1541427 
+chunk 1350000 1541990 
+chunk 1375000 1541174 
+chunk 1400000 1539813 
+chunk 1425000 1542611 
+chunk 1450000 1540699 
+chunk 1475000 1543203 
+chunk 1500000 1541232 
+chunk 1525000 1541705 
+chunk 1550000 1542063 
+chunk 1575000 1541483 
+chunk 1600000 1541160 
+chunk 1625000 1540689 
+chunk 1650000 1540874 
+chunk 1675000 1540937 
+chunk 1700000 1541116 
+chunk 1725000 465554 
+test stage1 106806193 t 1710.9991958141327
+   done in 1712s
+>> infer.py --out /home/ubuntu/ml/output5 03:59:14
+params {'k': 10, 'tau': 0.002, 'selector': 'ef', 'miss': 0.1, 'empty_scale': 1.5, 't': 0.5, 'one_to_one': True}
+filler tokens per country [('France', 46), ('US', 213), ('India', 573)]
+chunk 0 12329837 kept 967133
+chunk 200000 12327777 kept 966025
+chunk 400000 12329873 kept 966262
+chunk 600000 12328642 kept 965166
+chunk 800000 12326724 kept 965480
+chunk 1000000 12328412 kept 965790
+chunk 1200000 12331789 kept 967544
+chunk 1400000 12332809 kept 966129
+chunk 1600000 8170330 kept 640720
+S1 1732544  candidates/S1 4.83  matches/S1 3.29  empty frac 0.0604
+   done in 2933s

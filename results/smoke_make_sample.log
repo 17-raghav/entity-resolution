@@ -1,0 +1,13 @@
+﻿py : D:\portfolio_v0\entity-resolution\scripts\make_sample.py:55: DeprecationWarning: In Polars 2.0, the default 
+behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+At line:1 char:353
++ ... t=Get-Date; py -3.12 scripts\make_sample.py --raw "D:\Tech mix\Amazon ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\portfolio_v0..._as_null=True`.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  .explode("matched_entity_ids").filter(pl.col("matched_entity_ids") != "")
+full train: S1 2206821 S2 5034616 S3 5285603
+orphan S2/S3 records per S1 in full train: 1.215
+train S1 20000 S2+S3 93363 of which orphans 24305 countries [('India', 8037), ('US', 11963)]
+test S1 5000 S2+S3 23265 of which orphans 6076 countries [('India', 2004), ('US', 2996)]

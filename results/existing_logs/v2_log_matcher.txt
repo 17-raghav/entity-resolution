@@ -1,0 +1,20 @@
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.0515994
+[200]	valid_0's binary_logloss: 0.0510923
+[300]	valid_0's binary_logloss: 0.0509649
+[400]	valid_0's binary_logloss: 0.0507884
+Early stopping, best iteration is:
+[444]	valid_0's binary_logloss: 0.0507375
+matcher top features [('p_prune', 5763363), ('pp_sum23', 466778), ('pp_gap', 298315), ('pp_sum1', 71502), ('pp_rank23', 40377), ('pp_n23', 18506), ('b_rank', 16782), ('b_gap', 15701), ('bscore', 13093), ('pp_margin23', 12997), ('pp_n1', 12449), ('w1', 12264), ('pp_gap23', 12072), ('a_tset', 10819), ('w5', 10486), ('w2', 10211), ('w6', 9477), ('w0', 8790), ('n_tsort', 8536), ('len_c1', 8156), ('a_tsort', 7925), ('a_tset_gap', 7809), ('num_gap', 7439), ('n_ratio', 7267), ('r2', 7092)]
+val S1 56853 pruned pairs 226208
+  ef_m0.0_e1.25_oto0: 0.97980
+  ef_m0.0_e1.25_oto1: 0.97979
+  ef_m0.0_e1.0_oto0: 0.97977
+  ef_m0.0_e1.0_oto1: 0.97977
+  ef_m0.1_e1.0_oto1: 0.97976
+  ef_m0.1_e1.0_oto0: 0.97975
+  ef_m0.0_e1.5_oto1: 0.97975
+  ef_m0.0_e1.5_oto0: 0.97974
+  ef_m0.0_e0.8_oto0: 0.97973
+  ef_m0.0_e0.8_oto1: 0.97973
+best ef_m0.0_e1.25_oto0 0.9797965637001478

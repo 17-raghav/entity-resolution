@@ -1,0 +1,226 @@
+start Sat Sep 26 13:38:19 IST 2026
+train s1 2206821 states found 1.0
+train s23 10320219 states found 0.957457104350208
+test s1 1732544 states found 0.8502479590705921
+test s23 9969589 states found 0.8278329227012267
+normalize done Sat Sep 26 13:51:38 IST 2026
+keys 46960003 207059585 t 596.1469628810883
+train keys done Sat Sep 26 14:01:37 IST 2026
+chunk 0 26322450 13.4GB
+ranker {'intercept': -9.315410614013672, 'coef': {'lw0': 0.44974997639656067, 'lw1': 0.9512752890586853, 'lw2': 0.6417804956436157, 'lw3': 0.5182843804359436, 'lw4': 1.1982676982879639, 'lw5': 1.2204153537750244, 'lw6': 0.39227089285850525, 'lw7': 0.6177211403846741, 'lw8': 0.042681243270635605, 'r0': 0.6847020387649536, 'r1': -1.9878493547439575, 'r2': 2.831583261489868, 'r3': 4.002115726470947, 'r4': 0.6588740944862366, 'r5': -0.15783916413784027, 'r6': -0.3840888440608978, 'r7': -0.20466293394565582, 'r8': 2.1853020191192627, 'lnk': 0.5708768367767334}}
+ranker done Sat Sep 26 14:02:28 IST 2026
+train subset S1 787781
+chunk 0 990461 11.8GB
+chunk 25000 990768 11.4GB
+chunk 50000 990839 12.8GB
+chunk 75000 989792 12.3GB
+chunk 100000 990511 11.8GB
+chunk 125000 989959 11.8GB
+chunk 150000 990581 11.1GB
+chunk 175000 990916 12.1GB
+chunk 200000 990858 12.4GB
+chunk 225000 990400 12.6GB
+chunk 250000 989581 12.0GB
+chunk 275000 990664 12.4GB
+chunk 300000 990665 12.5GB
+chunk 325000 989877 13.3GB
+chunk 350000 989711 12.6GB
+chunk 375000 990348 12.8GB
+chunk 400000 990101 12.7GB
+chunk 425000 989980 13.4GB
+chunk 450000 989820 14.2GB
+chunk 475000 990246 13.3GB
+chunk 500000 990324 13.7GB
+chunk 525000 990726 13.2GB
+chunk 550000 990854 13.1GB
+chunk 575000 991168 13.3GB
+chunk 600000 989853 14.3GB
+chunk 625000 990180 13.4GB
+chunk 650000 990051 13.3GB
+chunk 675000 990938 13.6GB
+chunk 700000 990611 13.7GB
+chunk 725000 990559 15.1GB
+chunk 750000 990451 13.8GB
+chunk 775000 505809 12.8GB
+train stage1 31207602 t 727.5087096691132
+train stage1 done Sat Sep 26 14:14:37 IST 2026
+features 0 3961886
+features 100000 3961330
+features 200000 3960547
+features 300000 3959613
+features 400000 3961843
+features 500000 3961680
+features 600000 1513153
+feats done Sat Sep 26 14:22:59 IST 2026
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.00715442
+[200]	valid_0's binary_logloss: 0.00629984
+[300]	valid_0's binary_logloss: 0.00609908
+[400]	valid_0's binary_logloss: 0.00598859
+[500]	valid_0's binary_logloss: 0.00594119
+[600]	valid_0's binary_logloss: 0.00589141
+[700]	valid_0's binary_logloss: 0.00586468
+[800]	valid_0's binary_logloss: 0.00585309
+Early stopping, best iteration is:
+[762]	valid_0's binary_logloss: 0.0058491
+pruner_f0 top features [('bscore', 9942034), ('b_rank', 6574674), ('a_tset', 1940187), ('a_tset_gap', 1813291), ('b_rank23', 913533), ('o2_idfmax', 768099), ('num_gap', 736193), ('s_tset', 564707), ('b_gap23', 425389), ('a2_empty', 359189), ('n_tsort', 342523), ('o2_idf', 330326), ('only2_n', 318575), ('natok2', 232084), ('w5', 198904), ('state_rel', 160264), ('x_jw', 138619), ('c_lev', 119970), ('n_partial', 119949), ('nkeys', 105582), ('nlegal_b', 100514), ('num_rel', 99078), ('legal_rel', 87212), ('ids_j', 84356), ('n_tset', 73963)]
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.00720527
+[200]	valid_0's binary_logloss: 0.00633679
+[300]	valid_0's binary_logloss: 0.00614345
+[400]	valid_0's binary_logloss: 0.00603851
+[500]	valid_0's binary_logloss: 0.00597896
+[600]	valid_0's binary_logloss: 0.0059323
+[700]	valid_0's binary_logloss: 0.00591919
+[800]	valid_0's binary_logloss: 0.00591035
+[900]	valid_0's binary_logloss: 0.00590506
+Early stopping, best iteration is:
+[856]	valid_0's binary_logloss: 0.00590315
+pruner_f1 top features [('bscore', 9932103), ('b_rank', 6534077), ('a_tset', 1977002), ('a_tset_gap', 1859315), ('b_rank23', 976383), ('o2_idfmax', 798362), ('num_gap', 705281), ('s_tset', 568752), ('b_gap23', 407936), ('o2_idf', 323894), ('n_tsort', 320177), ('a2_empty', 300325), ('only2_n', 252708), ('natok2', 236468), ('w5', 195651), ('x_jw', 160813), ('state_rel', 158798), ('c_lev', 127922), ('n_partial', 121643), ('num_rel', 110659), ('nkeys', 106841), ('nlegal_b', 106539), ('ids_j', 89556), ('legal_rel', 83074), ('nlegal_a', 66199)]
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.00710207
+[200]	valid_0's binary_logloss: 0.00611161
+[300]	valid_0's binary_logloss: 0.00586461
+[400]	valid_0's binary_logloss: 0.00575561
+[500]	valid_0's binary_logloss: 0.00568832
+[600]	valid_0's binary_logloss: 0.00564439
+[700]	valid_0's binary_logloss: 0.00560656
+[800]	valid_0's binary_logloss: 0.00557671
+[900]	valid_0's binary_logloss: 0.00556378
+[1000]	valid_0's binary_logloss: 0.00555479
+Did not meet early stopping. Best iteration is:
+[1000]	valid_0's binary_logloss: 0.00555479
+pruner top features [('bscore', 19799054), ('b_rank', 13140865), ('a_tset', 3848858), ('a_tset_gap', 3686513), ('b_rank23', 1943093), ('o2_idfmax', 1556299), ('num_gap', 1449182), ('s_tset', 1112442), ('b_gap23', 854509), ('a2_empty', 714045), ('n_tsort', 669278), ('o2_idf', 638862), ('only2_n', 512842), ('natok2', 478135), ('w5', 383818), ('state_rel', 331026), ('x_jw', 279596), ('c_lev', 235334), ('n_partial', 234661), ('num_rel', 230745), ('nlegal_b', 208727), ('nkeys', 208278), ('legal_rel', 179083), ('ids_j', 172869), ('n_tset', 134406)]
+K=5 tau=0.0 {'pair_recall': 0.9264, 'total_pairs': 316606, 'mean_cands': 4.999, 'median_cands': 5.0, 'p95_cands': 5.0, 'empty_frac': 0.0}
+K=5 tau=0.002 {'pair_recall': 0.9263, 'total_pairs': 229312, 'mean_cands': 3.6207, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0298}
+K=5 tau=0.01 {'pair_recall': 0.9262, 'total_pairs': 220959, 'mean_cands': 3.4888, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0375}
+K=5 tau=0.03 {'pair_recall': 0.9256, 'total_pairs': 214663, 'mean_cands': 3.3894, 'median_cands': 4.0, 'p95_cands': 5.0, 'empty_frac': 0.0442}
+K=6 tau=0.0 {'pair_recall': 0.9559, 'total_pairs': 379872, 'mean_cands': 5.9979, 'median_cands': 6.0, 'p95_cands': 6.0, 'empty_frac': 0.0}
+K=6 tau=0.002 {'pair_recall': 0.9559, 'total_pairs': 241613, 'mean_cands': 3.8149, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0298}
+K=6 tau=0.01 {'pair_recall': 0.9557, 'total_pairs': 231100, 'mean_cands': 3.6489, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0375}
+K=6 tau=0.03 {'pair_recall': 0.955, 'total_pairs': 223410, 'mean_cands': 3.5275, 'median_cands': 4.0, 'p95_cands': 6.0, 'empty_frac': 0.0442}
+K=8 tau=0.0 {'pair_recall': 0.9688, 'total_pairs': 506304, 'mean_cands': 7.9942, 'median_cands': 8.0, 'p95_cands': 8.0, 'empty_frac': 0.0}
+K=8 tau=0.002 {'pair_recall': 0.9688, 'total_pairs': 249492, 'mean_cands': 3.9393, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0298}
+K=8 tau=0.01 {'pair_recall': 0.9685, 'total_pairs': 236842, 'mean_cands': 3.7396, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0375}
+K=8 tau=0.03 {'pair_recall': 0.9678, 'total_pairs': 227969, 'mean_cands': 3.5995, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0442}
+K=10 tau=0.0 {'pair_recall': 0.9695, 'total_pairs': 632580, 'mean_cands': 9.988, 'median_cands': 10.0, 'p95_cands': 10.0, 'empty_frac': 0.0}
+K=10 tau=0.002 {'pair_recall': 0.9694, 'total_pairs': 250572, 'mean_cands': 3.9564, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0298}
+K=10 tau=0.01 {'pair_recall': 0.9692, 'total_pairs': 237462, 'mean_cands': 3.7494, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0375}
+K=10 tau=0.03 {'pair_recall': 0.9684, 'total_pairs': 228369, 'mean_cands': 3.6058, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0442}
+K=12 tau=0.0 {'pair_recall': 0.9695, 'total_pairs': 758740, 'mean_cands': 11.98, 'median_cands': 12.0, 'p95_cands': 12.0, 'empty_frac': 0.0}
+K=12 tau=0.002 {'pair_recall': 0.9694, 'total_pairs': 250699, 'mean_cands': 3.9584, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0298}
+K=12 tau=0.01 {'pair_recall': 0.9692, 'total_pairs': 237496, 'mean_cands': 3.7499, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0375}
+K=12 tau=0.03 {'pair_recall': 0.9684, 'total_pairs': 228380, 'mean_cands': 3.606, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0442}
+K=15 tau=0.0 {'pair_recall': 0.9695, 'total_pairs': 947677, 'mean_cands': 14.9632, 'median_cands': 15.0, 'p95_cands': 15.0, 'empty_frac': 0.0}
+K=15 tau=0.002 {'pair_recall': 0.9694, 'total_pairs': 250713, 'mean_cands': 3.9586, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0298}
+K=15 tau=0.01 {'pair_recall': 0.9692, 'total_pairs': 237499, 'mean_cands': 3.7499, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0375}
+K=15 tau=0.03 {'pair_recall': 0.9684, 'total_pairs': 228380, 'mean_cands': 3.606, 'median_cands': 4.0, 'p95_cands': 7.0, 'empty_frac': 0.0442}
+pruner done Sat Sep 26 18:33:39 IST 2026
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's binary_logloss: 0.0499488
+[200]	valid_0's binary_logloss: 0.0494989
+[300]	valid_0's binary_logloss: 0.0493273
+[400]	valid_0's binary_logloss: 0.0492279
+[500]	valid_0's binary_logloss: 0.0491468
+[600]	valid_0's binary_logloss: 0.0491439
+Early stopping, best iteration is:
+[564]	valid_0's binary_logloss: 0.0491034
+matcher top features [('p_prune', 6331962), ('pp_sum23', 454003), ('pp_gap', 380200), ('pp_sum1', 89158), ('pp_rank23', 51887), ('b_rank', 19909), ('b_gap', 19861), ('bscore', 15422), ('pp_margin23', 15247), ('w1', 14891), ('a_tset', 13137), ('pp_n1', 12969), ('pp_n23', 12958), ('pp_gap23', 12845), ('w5', 12770), ('w2', 12728), ('w6', 12432), ('w0', 10276), ('a_tsort', 9770), ('len_c1', 9734), ('n_tsort', 9609), ('n_ratio', 9156), ('num_gap', 9060), ('a_partial', 9038), ('a_tset_gap', 8832)]
+val S1 63334 pruned pairs 250572
+  ef_m0.3_e0.8_oto1: 0.97964
+  ef_m0.3_e0.8_oto0: 0.97963
+  ef_m0.3_e1.0_oto1: 0.97962
+  ef_m0.3_e1.0_oto0: 0.97961
+  ef_m0.1_e1.0_oto1: 0.97961
+  ef_m0.0_e1.0_oto1: 0.97960
+  ef_m0.1_e0.8_oto1: 0.97960
+  ef_m0.1_e1.0_oto0: 0.97959
+  ef_m0.0_e1.0_oto0: 0.97959
+  ef_m0.3_e1.25_oto0: 0.97958
+best ef_m0.3_e0.8_oto1 0.9796449526924693
+matcher done Sat Sep 26 18:41:13 IST 2026
+chunk 0 994757 12.2GB
+chunk 25000 994866 12.5GB
+chunk 50000 995561 12.3GB
+chunk 75000 994760 13.4GB
+chunk 100000 994867 12.5GB
+chunk 125000 995270 12.8GB
+chunk 150000 995213 12.6GB
+chunk 175000 995298 13.9GB
+chunk 200000 995072 12.9GB
+chunk 225000 995238 14.2GB
+chunk 250000 995219 13.4GB
+chunk 275000 995444 14.1GB
+chunk 300000 994471 13.1GB
+chunk 325000 995136 13.3GB
+chunk 350000 995305 13.4GB
+chunk 375000 994792 14.0GB
+chunk 400000 994855 14.9GB
+chunk 425000 995094 13.7GB
+chunk 450000 995654 13.8GB
+chunk 475000 995802 13.9GB
+chunk 500000 995079 13.9GB
+chunk 525000 995450 13.8GB
+chunk 550000 995508 13.9GB
+chunk 575000 994932 14.1GB
+chunk 600000 994961 14.2GB
+chunk 625000 995090 14.3GB
+chunk 650000 994916 14.1GB
+chunk 675000 995055 14.6GB
+chunk 700000 995241 14.6GB
+chunk 725000 995510 14.4GB
+chunk 750000 994864 14.6GB
+chunk 775000 995130 14.7GB
+chunk 800000 994685 15.0GB
+chunk 825000 995052 15.6GB
+chunk 850000 994868 14.9GB
+chunk 875000 994681 15.0GB
+chunk 900000 995056 14.9GB
+chunk 925000 995098 15.3GB
+chunk 950000 995705 15.3GB
+chunk 975000 994982 15.3GB
+chunk 1000000 994932 15.7GB
+chunk 1025000 995303 15.3GB
+chunk 1050000 995323 15.4GB
+chunk 1075000 995096 15.5GB
+chunk 1100000 995163 15.7GB
+chunk 1125000 994907 15.9GB
+chunk 1150000 995134 16.1GB
+chunk 1175000 994760 15.8GB
+chunk 1200000 995682 15.8GB
+chunk 1225000 995311 15.9GB
+chunk 1250000 994978 16.1GB
+chunk 1275000 995339 16.2GB
+chunk 1300000 995130 16.5GB
+chunk 1325000 995311 16.4GB
+chunk 1350000 995647 16.5GB
+chunk 1375000 995375 16.6GB
+chunk 1400000 994846 16.7GB
+chunk 1425000 995689 17.0GB
+chunk 1450000 995311 16.8GB
+chunk 1475000 995718 16.8GB
+chunk 1500000 994946 16.9GB
+chunk 1525000 995345 17.2GB
+chunk 1550000 995849 17.3GB
+chunk 1575000 995044 17.4GB
+chunk 1600000 995265 17.5GB
+chunk 1625000 994835 17.6GB
+chunk 1650000 995229 17.6GB
+chunk 1675000 994795 17.4GB
+chunk 1700000 995033 17.4GB
+chunk 1725000 300434 15.5GB
+test stage1 68966267 t 3110.3834562301636
+test stage1 done Sat Sep 26 19:33:09 IST 2026
+params {'k': 10, 'tau': 0.002, 'selector': 'ef', 'miss': 0.3, 'empty_scale': 0.8, 't': 0.5, 'one_to_one': True}
+chunk 0 7960592 kept 808997
+chunk 200000 7960677 kept 808084
+chunk 400000 7962374 kept 807650
+chunk 600000 7960767 kept 806751
+chunk 800000 7960127 kept 807104
+chunk 1000000 7960618 kept 805642
+chunk 1200000 7962773 kept 808333
+chunk 1400000 7962748 kept 806802
+chunk 1600000 5275591 kept 535295
+S1 1732544  candidates/S1 4.04  matches/S1 3.24  empty frac 0.0605
+infer done Sat Sep 26 21:33:53 IST 2026
+ALLDONE

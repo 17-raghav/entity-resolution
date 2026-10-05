@@ -1,0 +1,14 @@
+cmd: py -3.12 scripts/score.py --pred output_smoke/matching_results.tsv --gt data/sample/test_ground_truth.tsv --s1 data/sample/test/test_source1.tsv
+S1 5000  macro F0.5 0.9947
+pair precision 0.9995  pair recall 0.9821
+per country (country, S1, F0.5): [('India', 2004, 0.9934), ('US', 2996, 0.9955)]
+
+cmd: official validate_submission.py (from the challenge student_resource, not included in this repo) --test-dir data/sample/test
+ML Challenge 2026 — submission validator
+  test dir: data/sample/test
+  required S1 entities: 5000
+  matching_results.tsv: 5000 rows (300 empty, 4700 non-empty).
+  candidate_pairs.tsv: 5000 rows (282 empty, 4718 non-empty).
+
+WARNING: ID-existence check is OFF (the default) — not checking that matched/candidate IDs exist in the test set. Every other rule is still checked. Re-run with --check-ids to enable it (needs test_source2/3.tsv; uses more memory). A nonexistent ID only lowers your score, never rejects your submission.
+PASS — no blocking issues found. Safe to submit.

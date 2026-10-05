@@ -1,0 +1,11 @@
+params {'k': 10, 'tau': 0.002, 'selector': 'ef', 'miss': 0.0, 'empty_scale': 1.25, 't': 0.5, 'one_to_one': True}
+chunk 0 7960464 kept 831796
+chunk 200000 7960485 kept 830556
+chunk 400000 7962240 kept 830685
+chunk 600000 7960532 kept 829701
+chunk 800000 7959815 kept 830377
+chunk 1000000 7960347 kept 828925
+chunk 1200000 7962533 kept 830914
+chunk 1400000 7962558 kept 829805
+chunk 1600000 5275465 kept 550444
+S1 1732544  candidates/S1 4.15  matches/S1 3.26  empty frac 0.0601

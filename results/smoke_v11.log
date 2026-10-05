@@ -1,0 +1,28 @@
+cmd: BER_V10_WORK=work_smoke BER_V11_ROOT=v11_smoke py -3.12 v11/v11_matcher.py 2.0 w2 && py -3.12 v11/v11_infer.py w2
+Mon Oct  5 18:52:20 IST 2026
+hidden S1 3845 (0.192), their records 13344
+hidden S1 present in scored (must be 0): 0
+pruned pairs 58826 -> 57573 after removing hidden-entity records (0s)
+train pairs 51969 val pairs 5604 decoy negatives share (train) 0.559 (1s)
+Training until validation scores don't improve for 100 rounds
+Early stopping, best iteration is:
+[94]	valid_0's binary_logloss: 0.0274144
+trained (5s)
+  p10_e1.0: 0.99542
+  p10_e1.5: 0.99542
+  p10_e2.0: 0.99542
+  p10_e3.0: 0.99476
+  p_e1.0: 0.99463
+  p_e1.5: 0.99463
+  p_e2.0: 0.99463
+  p_e3.0: 0.99463
+saved v11_smoke\work11_w2 {"selector": "ef", "miss": 0.0, "empty_scale": 1.0, "one_to_one": true} total 5s
+chunk 0 248256 kept 17405 5s
+cached work_smoke/test_d.parquet (17405, 154) 6s
+w2 {'selector': 'ef', 'miss': 0.0, 'empty_scale': 1.0, 'one_to_one': True} matches/S1 all 3.393 [('US', 3.406), ('India', 3.373)] 6s
+Mon Oct  5 18:52:39 IST 2026
+
+cmd: scripts/score.py on v11_smoke/output11_w2
+S1 5000  macro F0.5 0.9957
+pair precision 0.9995  pair recall 0.9864
+per country (country, S1, F0.5): [('India', 2004, 0.9944), ('US', 2996, 0.9965)]
