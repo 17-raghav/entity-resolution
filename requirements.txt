@@ -1,0 +1,8 @@
+indic_transliteration==2.3.82
+lightgbm==4.7.0
+numpy==2.5.0
+polars==1.43.2
+pyarrow==24.0.0
+RapidFuzz==3.14.6
+scikit-learn==1.9.0
+scipy==1.18.0

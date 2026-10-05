@@ -1,0 +1,20 @@
+# data and generated artifacts (never commit challenge data)
+data/
+work*/
+output*/
+v11_smoke/
+*.parquet
+*.tsv
+*.tsv.gz
+*.zip
+
+# secrets
+*.pem
+*.key
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
